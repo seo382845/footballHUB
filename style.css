@@ -1,0 +1,238 @@
+/* 홈페이지 기본 설정 */
+html {
+    background-color: #eef3ec;
+}
+
+body {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 30px 24px;
+    background-color: white;
+    color: #222222;
+    font-family: Arial, "맑은 고딕", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    border: 1px solid #d0dbcd;
+}
+
+/* 홈페이지 제목과 메뉴 */
+h1 {
+    margin: 0 -30px;
+    padding: 22px 30px;
+    background-color: #32643b;
+    color: white;
+    font-size: 32px;
+}
+
+.menu {
+    margin: 0 -30px 22px;
+    padding: 12px 22px;
+    background-color: #e4eee1;
+    color: #a1b49d;
+    border-bottom: 1px solid #c4d4bf;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 4px 9px;
+    color: #264b2c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+    background-color: #32643b;
+    color: white;
+}
+
+/* 본문과 제목 */
+h2 {
+    margin-top: 24px;
+    padding-bottom: 6px;
+    color: #32643b;
+    font-size: 25px;
+    border-bottom: 2px solid #7c9b75;
+}
+
+h3 {
+    margin-top: 26px;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    font-size: 18px;
+    background-color: #edf3e9;
+    border-left: 4px solid #527c48;
+}
+
+h4 {
+    color: #32643b;
+    font-size: 16px;
+}
+
+p {
+    margin: 12px 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #d0dbcd;
+    margin: 24px 0;
+}
+
+.menu + hr {
+    display: none;
+}
+
+a, a:visited {
+    color: #32643b;
+}
+
+a:hover {
+    color: #214b2b;
+    text-decoration: underline;
+}
+
+ul {
+    padding-left: 26px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #c4d4bf;
+}
+
+/* 경기 일정, 순위, 선수 기록 등 표 디자인 */
+table {
+    width: 100%;
+    margin: 12px 0 20px;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #c4d4bf;
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid #c4d4bf;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background-color: #e4eee1;
+    color: #264b2c;
+}
+
+tr:nth-child(even) td {
+    background-color: #f6f8f4;
+}
+
+input[type="checkbox"] {
+    accent-color: #32643b;
+}
+
+/* 전술 분석 페이지의 축구장 */
+.pitch {
+    position: relative;
+    width: 360px;
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
+    box-sizing: border-box;
+    margin: 20px auto;
+    background-color: #54834b;
+    border: 3px solid #32643b;
+    overflow: hidden;
+}
+
+.pitch::before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    bottom: 3%;
+    left: 4%;
+    right: 4%;
+    border: 2px solid white;
+}
+
+.center-line {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    width: 92%;
+    border-top: 2px solid white;
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.penalty {
+    position: absolute;
+    left: 22%;
+    width: 56%;
+    height: 15%;
+    box-sizing: border-box;
+    border: 2px solid white;
+}
+
+.penalty.top {
+    top: 3%;
+}
+
+.penalty.bottom {
+    bottom: 3%;
+}
+
+.player {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background-color: white;
+    color: #264b2c;
+    border: 1px solid #32643b;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+/* 화면이 좁을 때 여백과 표 크기 조절 */
+@media (max-width: 700px) {
+    body {
+        margin: 0;
+        padding: 0 15px 20px;
+        border: 0;
+    }
+
+    h1 {
+        margin: 0 -15px;
+        padding: 16px 15px;
+    }
+
+    .menu {
+        margin: 0 -15px 20px;
+        padding: 8px 10px;
+    }
+
+    .menu a {
+        padding: 4px 5px;
+    }
+
+    th, td {
+        padding: 7px 5px;
+        font-size: 13px;
+    }
+}
